@@ -74,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'blog.wsgi.application'
-WAGTAIL_SITE_NAME = 'blog'
+WAGTAIL_SITE_NAME = 'Blog da Annanda'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
