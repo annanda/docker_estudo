@@ -50,6 +50,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 )
 
 ROOT_URLCONF = 'blog.urls'
@@ -65,13 +67,14 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'blog.wsgi.application'
-
+WAGTAIL_SITE_NAME = 'Blog da Annanda'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
